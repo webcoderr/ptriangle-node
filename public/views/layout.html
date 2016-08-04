@@ -1,0 +1,22 @@
+<section ng-controller="ptriangleController">
+    <div class="container">
+
+        <form method="post" name="pascal-triangle" class="form-signin" ng-submit="getTriangle(trianglerows)">
+            <h2 class="form-signin-heading">Please type a number</h2>
+            <label for="text" class="sr-only">Username</label>
+            <input type="text" name="name" ng-model="trianglerows" class="form-control" placeholder="Please enter number" required autofocus>
+            <p>&nbsp;</p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Enter</button>
+        </form>
+
+        <!--<p class="form-signin">{{pascalTriangle}}</p>-->
+        <ul class="form-signin">
+		    <li style="list-style:none; font-size:20px;" ng-repeat="pt in pascalTriangle" ng-class="colors[$index]">
+		    	{{pt.toString()}}
+		    </li>
+        </ul>
+
+    </div>
+
+</section>
+<!--<p style="text-align:center;">&copy; 2016 Pascals Triangle Web App</p>-->
